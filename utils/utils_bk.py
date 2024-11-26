@@ -223,7 +223,7 @@ def load_checkpoint(model, optimizer, filename='checkpoint.pth'):
         return model, optimizer, 0, None
 
 
- def evaluate(model, val_dataset, device, checkpoint_path=None):
+def evaluate(model, val_dataset, device, checkpoint_path=None):
     """
     Evaluate the model performance on the validation or test dataset.
     

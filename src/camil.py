@@ -1,19 +1,7 @@
-import os
-import sys  
 import torch
-import torch.optim as optim
 import torch.nn as nn
-import time
-from collections import deque
 
-
-PROJECT_DIR = os.environ.get('PROJECT_DIR') 
-sys.path.append(os.path.join(PROJECT_DIR))
-sys.path.append(os.path.join(PROJECT_DIR, "src"))
-
-
-from src.custom_layers import (
-    NeighborAggregator, LastSigmoid, MILAttentionLayer, CustomAttention) 
+from src.custom_layers import NeighborAggregator, LastSigmoid, MILAttentionLayer, CustomAttention
 from src.nystromformer import NystromAttention  
 
 class CAMIL(nn.Module):

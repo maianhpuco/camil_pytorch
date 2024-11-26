@@ -2,7 +2,6 @@ import torch
 from torch.utils.data import Dataset
 import h5py
 import os
-import sys 
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import normalize
@@ -17,7 +16,7 @@ class CustomDataset(Dataset):
         feature_file_end ='h5',  
         shuffle=True, 
         dry_run=False, 
-        ):
+    ):
         """
         Args:
             label_file (str): Path to the CSV file containing labels for each sample.
@@ -53,8 +52,7 @@ class CustomDataset(Dataset):
             np.random.shuffle(self.indices)
         
     def get_feature_path(self, basename):
-        return os.path.join(self.feature_folder, 
-                            f'{basename}.{self.feature_file_end}')
+        return os.path.join(self.feature_folder, f'{basename}.{self.feature_file_end}')
     
     def __len__(self):
         """Returns the total number of samples."""
@@ -85,9 +83,9 @@ class CustomDataset(Dataset):
         label_tensor = torch.tensor([label], dtype=torch.float32).view(1, 1)
         # print(label_tensor)
         # Process adjacency matrix
-        Idx = neighbor_indices[:, :8]
-        rows = np.asarray([[enum] * len(item) for enum, item in enumerate(Idx)]).ravel()
-        columns = Idx.ravel()
+        idx = neighbor_indices[:, :8]
+        rows = np.asarray([[enum] * len(item) for enum, item in enumerate(idx)]).ravel()
+        columns = idx.ravel()
 
         neighbor_matrix = values[:, 1:]
         normalized_matrix = normalize(neighbor_matrix, norm="l2")
