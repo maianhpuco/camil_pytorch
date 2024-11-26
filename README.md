@@ -3,13 +3,17 @@ Run
 activate conda/pip env and then:  
 
 down load this file
-```!gdown 1CS7I0yrTSNLbFk_CzqLrh5TKesZo3uXm ``` 
-then unzip them into ```data/camelyon16_feature/h5_files```
+```!gdown 1CS7I0yrTSNLbFk_CzqLrh5TKesZo3uXm``` 
+then unzip them into 
+```
+mkdir data/camelyon16_features
+unzip h5_files-20241111T205421Z-001.zip -d data/camelyon16_features
+```
 
 export environment variables
 ```export PROJECT_DIR=$(pwd)``` 
 before start env 
-```export DATA_DIR=$PROJECT_DIR/data/camelyon16_features/h5_files```
+```export DATA_DIR=$(pwd)/data/camelyon16_features/h5_files```
 
 - to running the training: 
 ```python train.py```
