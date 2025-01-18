@@ -1,22 +1,35 @@
-# implementation of CAMIL in pytorch 
-
+# implementation of CAMIL in pytorch
 
 Run 
-activate conda/pip env and then:  
+Activate conda/pip env and then:  
 
-```export PROJECT_DIR=$(pwd)``` 
-before start env 
-```export DATA_DIR=/project/hnguyen2/mvu9/camelyon16_features_data/h5_files ```
+Down load this file
+```
+!gdown 1CS7I0yrTSNLbFk_CzqLrh5TKesZo3uXm
+``` 
 
-down load this file
-```!gdown 1CS7I0yrTSNLbFk_CzqLrh5TKesZo3uXm ``` 
-then unzip them into ```data/camelyon16_feature/h5_files```
+Unzip file to destination folder
+```
+mkdir data/camelyon16_features
+unzip h5_files-20241111T205421Z-001.zip -d data/camelyon16_features
+```
 
-- to running the training: 
-```python train.py```
-- to dry run (testing the code with few sample), run:
-```python train.py --dry_run True```
+Export environment variables before start training
+```
+export PROJECT_DIR=$(pwd)
+export DATA_DIR=$(pwd)/data/camelyon16_features/h5_files
+```
 
+- To running the training: 
+```
+python train.py
+```
+- To dry run (testing the code with few sample), run:
+```
+python train.py --dry_run True
+```
+
+Project structure
 ``` 
 .
 ├── README.md
