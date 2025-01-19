@@ -28,3 +28,9 @@ src/camil_bk.py
 src/camil_bk2.py 
 
 .codegpt
+
+data_gdown/
+.env
+.DS_Store
+
+*.h5

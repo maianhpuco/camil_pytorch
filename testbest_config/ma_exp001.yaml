@@ -1,6 +1,6 @@
-SLIDE_PATH: '/project/hnguyen2/hqvo3/Datasets/digital_pathology/public/CAMELYON16/images' #replace you path 
-JSON_PATH: '/project/hnguyen2/mvu9/camelyon16/json_files' # replace your path 
-SPIXEL_PATH: '/project/hnguyen2/mvu9/camelyon16/spixel_paths_zip'
+SLIDE_PATH: '/Users/nam.le/Desktop/research/camil_pytorch/data_gdown/slide_paths' #replace you path 
+JSON_PATH: '/Users/nam.le/Desktop/research/camil_pytorch/data_gdown/json_file' # replace your path https://drive.google.com/drive/folders/1U7xxQZPXrla2upVTMpubhZIiA9o7A2AO?fbclid=IwAR0gqG32lev8DoP8F4L68ou8uRLj_fqIsKzJCEgdYe-anZ5NPCaPvwBY54s
+SPIXEL_PATH: '/Users/nam.le/Desktop/research/camil_pytorch/data_gdown/superpixels' # https://drive.google.com/drive/folders/1wss_cxh424pfmCAbOk1aDN1lbvC7x61p?fbclid=IwAR0gqG32lev8DoP8F4L68ou8uRLj_fqIsKzJCEgdYe-anZ5NPCaPvwBY54s
 scoring_function: get_scoring_do_nothing 
 pruning_function: get_pruning_do_nothing
 batch_size: 256
