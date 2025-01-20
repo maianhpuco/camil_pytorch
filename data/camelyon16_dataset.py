@@ -84,7 +84,7 @@ class CustomDataset(Dataset):
         print("indices")
         print(neighbor_indices.shape)
         print("similaroty")
-        print(similarities.shape)
+        print(values.shape)
         
         print("-------------------")
         label_tensor = torch.tensor([label], dtype=torch.float32).view(1, 1)
