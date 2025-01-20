@@ -83,6 +83,7 @@ class CustomDataset(Dataset):
         print(features.shape)
         print("indices")
         print(neighbor_indices.shape)
+        print(neighbor_indices[0, :8])
         print("similaroty")
         print(values.shape)
         
