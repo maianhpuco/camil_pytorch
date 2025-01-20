@@ -10,6 +10,7 @@ import argparse
 
 PROJECT_DIR = os.environ.get('PROJECT_DIR') 
 DATA_DIR  = '/project/hnguyen2/mvu9/camelyon16_features_data/h5_files'
+
 sys.path.append(os.path.join(PROJECT_DIR))
 sys.path.append(os.path.join(DATA_DIR))
 # sys.path.append(os.path.join(DATA_DIR))
