@@ -72,7 +72,7 @@ class CustomDataset(Dataset):
         # Load the HDF5 file
         with h5py.File(file_path,  "r") as f:
             features = f['features'][:]
-            neighbor_indices = f['indices'][:]
+            neighbor_indices = f['indices'][:] 
             values = f['similarities'][:]
             values = np.nan_to_num(values)
             label = self.name_label_dict[file_basename]
@@ -86,6 +86,7 @@ class CustomDataset(Dataset):
         print(neighbor_indices[0])
         print("similaroty")
         print(values.shape)
+        print(values[0,:])
         
         print("-------------------")
         label_tensor = torch.tensor([label], dtype=torch.float32).view(1, 1)
