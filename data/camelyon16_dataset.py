@@ -77,6 +77,16 @@ class CustomDataset(Dataset):
             values = np.nan_to_num(values)
             label = self.name_label_dict[file_basename]
             
+        print("-------------------")
+        print("START CHECKING THE H5 FILE")
+        print("features")
+        print(features.shape)
+        print("indices")
+        print(neighbor_indices.shape)
+        print("similaroty")
+        print(similarities.shape)
+        
+        print("-------------------")
         label_tensor = torch.tensor([label], dtype=torch.float32).view(1, 1)
         
         #Get 5 neighor
@@ -108,14 +118,8 @@ class CustomDataset(Dataset):
         # print("- label", torch.tensor(label, dtype=torch.float32))
         # features_tensor = features_tensor.unsqueeze(0)  # Adding the batch dimension
         # sparse_matrix = sparse_matrix.unsqueeze(0)  # Adding the batch dimension to sparse matrix
-        print(">>>>>> print shape")
-        # print(features_tensor.shape)
-        # print(sparse_matrix.shape)
-        # print(label_tensor.shape)
-        k = 100000
-        new_features = torch.rand(k, 512)
-        new_matrix = torch.rand(k, k)
-         
-        return new_features, new_matrix, label_tensor  
+        # print(">>>>>> print shape")
+
+        return features_tensor, sparse_matrix, label_tensor  
         # return features_tensor, sparse_matrix, label_tensor 
 
